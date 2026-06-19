@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://3c2okejjb0k"]
+
+[ext_resource type="Texture2D" uid="uid://ph8fyt45hfag" path="res://lava_block.png" id="1_34hvj"]
+[ext_resource type="Script" uid="uid://oadhp1i47shv" path="res://lava.gd" id="1_gil3p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gil3p"]
+size = Vector2(16, 15)
+
+[node name="Lava" type="Area2D"]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("1_gil3p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_34hvj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_gil3p")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,8 +1,103 @@
-[gd_scene load_steps=2 format=3 uid="uid://y60mtguy0rfb"]
+[gd_scene load_steps=10 format=4 uid="uid://y60mtguy0rfb"]
+
+[ext_resource type="Texture2D" uid="uid://dmu8blfntenmu" path="res://steel_block.png" id="1_3hls8"]
+[ext_resource type="PackedScene" uid="uid://161tb4es0lgy" path="res://player.tscn" id="2_hbghi"]
+[ext_resource type="PackedScene" uid="uid://y4s5xr6feycq" path="res://player_2.tscn" id="3_hn12h"]
+[ext_resource type="PackedScene" uid="uid://yibidjnjm15c" path="res://fire_crate.tscn" id="4_ihfcg"]
+[ext_resource type="PackedScene" uid="uid://3c2okejjb0k" path="res://lava.tscn" id="5_rka8t"]
+[ext_resource type="PackedScene" uid="uid://bg0hv35b0vqf4" path="res://water.tscn" id="6_5hph3"]
+[ext_resource type="PackedScene" uid="uid://dwfpw2dh3il1o" path="res://flag.tscn" id="7_j7kpp"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hbghi"]
+texture = ExtResource("1_3hls8")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_ilcil"]
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
+sources/0 = SubResource("TileSetAtlasSource_hbghi")
 
 [node name="Level_1" type="Node"]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="steel" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("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AAAoABYAAAAAAAAAAAApABYAAAAAAAAAAAAqABYAAAAAAAAAAAArABYAAAAAAAAAAAAsABYAAAAAAAAAAAAtABYAAAAAAAAAAAAuABYAAAAAAAAAAAApABwAAAAAAAAAAAAqABwAAAAAAAAAAAArABwAAAAAAAAAAAAxABcAAAAAAAAAAAAwABcAAAAAAAAAAAAvABcAAAAAAAAAAAAvABYAAAAAAAAAAAAtABUAAAAAAAAAAAAsABUAAAAAAAAAAAAmABUAAAAAAAAAAAAlABUAAAAAAAAAAAAkABUAAAAAAAAAAAAjABUAAAAAAAAAAAAiABUAAAAAAAAAAAAhABUAAAAAAAAAAAAbABUAAAAAAAAAAAAaABUAAAAAAAAAAAAZABUAAAAAAAAAAAAYABUAAAAAAAAAAAAXABUAAAAAAAAAAAAWABUAAAAAAAAAAAAVABUAAAAAAAAAAAAUABUAAAAAAAAAAAATABUAAAAAAAAAAAAuABcAAAAAAAAAAAAzABgAAAAAAAAAAAAyABgAAAAAAAAAAAAxABgAAAAAAAAAAAAwABgAAAAAAAAAAAAvABgAAAAAAAAAAAAuABgAAAAAAAAAAAAtABcAAAAAAAAAAAAsABcAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_ilcil")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+zoom = Vector2(2, 2)
+
+[node name="Lava" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(504, 456)
+
+[node name="Lava2" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(520, 456)
+
+[node name="Lava3" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(536, 456)
+
+[node name="Lava4" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(552, 456)
+
+[node name="Lava5" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(568, 456)
+
+[node name="Lava6" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(584, 456)
+
+[node name="Lava7" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(600, 456)
+
+[node name="Lava8" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(520, 344)
+
+[node name="Lava9" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(504, 344)
+
+[node name="Lava10" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(488, 344)
+
+[node name="Lava11" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(472, 344)
+
+[node name="Lava12" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(456, 344)
+
+[node name="Lava13" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(616, 456)
+
+[node name="Lava14" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(632, 456)
+
+[node name="Lava15" parent="." instance=ExtResource("5_rka8t")]
+position = Vector2(648, 456)
+
+[node name="Water" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(696, 344)
+
+[node name="Water2" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(680, 344)
+
+[node name="Water3" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(664, 344)
+
+[node name="Water4" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(648, 344)
+
+[node name="Water5" parent="." instance=ExtResource("6_5hph3")]
+position = Vector2(632, 344)
+
+[node name="flag" parent="." instance=ExtResource("7_j7kpp")]
+position = Vector2(347, 320)
+
+[node name="Player" parent="." instance=ExtResource("2_hbghi")]
+z_index = 1
+position = Vector2(424, 440)
+collision_mask = 1
+
+[node name="Player2" parent="." instance=ExtResource("3_hn12h")]
+position = Vector2(376, 440)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("4_ihfcg")]
+position = Vector2(696, 440)

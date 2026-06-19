@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://yibidjnjm15c"]
+
+[ext_resource type="Texture2D" uid="uid://1mcwp6dhrqcn" path="res://steel_lava2.png" id="1_qnrdj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e57g8"]
+size = Vector2(16, 16)
+
+[node name="RigidBody2D" type="RigidBody2D" groups=["rigidbody"]]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_e57g8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_qnrdj")

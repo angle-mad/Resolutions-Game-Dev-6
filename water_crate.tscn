@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpsdkb1whjot8"]
+
+[ext_resource type="Texture2D" uid="uid://xhbu6kxbi5wy" path="res://steel_water.png" id="1_4kthb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5eriq"]
+size = Vector2(16, 16)
+
+[node name="RigidBody2D" type="RigidBody2D" groups=["Rigidbody"]]
+collision_layer = 8
+collision_mask = 72
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4kthb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5eriq")
