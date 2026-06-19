@@ -1,4 +1,4 @@
-# Resolution Game Dev Week 5 Project
+# Resolution Game Dev Week 6 Project
 
 ## How to Play
 Move water guy left with a, move right with d, jump up with a
